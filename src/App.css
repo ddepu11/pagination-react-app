@@ -16,7 +16,7 @@
 body {
   min-height: 100vh;
   color: black;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 a {
@@ -54,19 +54,22 @@ input:focus {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
-  gap: 50px;
 }
-
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  grid-auto-rows: minmax(200px, 320px);
+  gap: 10px;
+}
 .blog img {
   width: 100%;
-  height: 250px;
+  height: 100px;
   object-fit: cover;
 }
 .details {
-  margin: 20px;
+  margin: 10px 20px;
 }
+
 .btn {
   position: absolute;
   left: 10px;
@@ -76,17 +79,32 @@ input:focus {
   background: #7ea3da;
   color: white;
 }
+
 .details h2 {
   color: #111;
-  margin-bottom: 20px;
-  font-size: 1.1em;
-}
-.details p {
-  color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 3px;
   font-size: 0.8em;
 }
+
+.details p {
+  color: #333;
+  margin-bottom: 2px;
+  font-size: 0.7em;
+}
+
 .details span {
   color: #333;
-  font-size: 0.75em;
+  font-size: 0.6em;
+}
+.buttons {
+  padding: 30px;
+}
+
+.pag-btn {
+  font-size: 0.8em;
+  background: black;
+  color: white;
+  padding: 4px 10px;
+  margin-right: 15px;
+  border-radius: 5px;
 }

@@ -2,16 +2,16 @@ import { useEffect } from "react";
 import { useGlobalContext } from "./context";
 
 const useFetch = (url) => {
-  const { setSpaceBlogs } = useGlobalContext();
+  const { setSpaceBlogs, setLoading } = useGlobalContext();
 
   const getCats = async () => {
+    setLoading(true);
     try {
       const res = await fetch(url);
       const data = await res.json();
 
-      console.log(data);
-
       setSpaceBlogs(data);
+      setLoading(false);
     } catch (error) {
       console.log(error);
       setSpaceBlogs([]);
