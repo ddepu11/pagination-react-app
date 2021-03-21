@@ -42,21 +42,26 @@ function App() {
           return <Cards key={index} {...item} />;
         })
       : "";
+
   const showButtons =
     blogs.length !== 0
       ? blogs.map((item, index) => {
-          return <Pagination key={index} index={index} />;
+          return <Pagination key={index} cIndex={index} />;
         })
       : "";
 
   function prev() {
-    if (index !== 0) {
+    if (index === 0) {
+      setIndex(blogs.length - 1);
+    } else {
       setIndex(index - 1);
     }
   }
 
   function next() {
-    if (index < 11) {
+    if (index === blogs.length - 1) {
+      setIndex(0);
+    } else {
       setIndex(index + 1);
     }
   }
