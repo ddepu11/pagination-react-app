@@ -5,7 +5,7 @@ export default function Pagination({ index }) {
   const { setIndex } = useGlobalContext();
 
   const handleClick = (e) => {
-    setIndex(e.target.dataset.index);
+    setIndex(+e.target.dataset.index);
   };
 
   return (

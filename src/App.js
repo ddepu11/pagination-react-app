@@ -30,7 +30,6 @@ function App() {
     });
 
     setBlogs(newBlogs);
-    console.log(newBlogs);
   }
 
   useEffect(() => {
@@ -60,10 +59,8 @@ function App() {
     if (index < 11) {
       setIndex(index + 1);
     }
-
-    console.log(typeof index);
   }
-  
+
   return (
     <div className="container ">
       <div className="grid">{loading ? <h1>Loading...</h1> : showBlogs}</div>
